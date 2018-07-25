@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="50dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tv_01"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="插入数据"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv_02"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="查询数据"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv_03"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="删除一条数据"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv_04"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="清除数据"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:textColor="@color/colorAccent"
+            tools:text="hahhahah" />
+
+        <TextView
+            android:id="@+id/tv_05"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="切换数据库"
+            android:textColor="#ffffff" />
+
+
+    </LinearLayout>
+
+</ScrollView>
