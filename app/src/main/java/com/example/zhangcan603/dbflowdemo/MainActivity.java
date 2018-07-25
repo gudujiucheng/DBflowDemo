@@ -73,4 +73,8 @@ public class MainActivity extends AppCompatActivity {
         }
         textView.setText(s);
     }
+
+    /**
+     * 开启事务、切换数据库、数据库表升级、外键、多model依赖的情况。
+     */
 }
