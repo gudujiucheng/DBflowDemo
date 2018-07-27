@@ -6,6 +6,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.zhangcan603.dbflowdemo.sqlite.SQLiteManager;
+import com.example.zhangcan603.dbflowdemo.sqlite.table.PersonTable;
+import com.example.zhangcan603.dbflowdemo.table.Category;
 import com.example.zhangcan603.dbflowdemo.table.User;
 import com.example.zhangcan603.dbflowdemo.table.User_Table;
 import com.raizlabs.android.dbflow.sql.language.SQLite;
@@ -58,8 +61,30 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {//清空数据
                 SQLite.delete(User.class).execute();
                 searchAllUser();
+
+                List<User> list = SQLite.select().from(User.class).where(User_Table.age.eq(10),User_Table.userName.isNotNull()).queryList();
             }
         });
+
+        //传统方式
+        findViewById(R.id.tv_05).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {//传统数据库操作
+//                PersonTable personTable =   new PersonTable();
+//                SQLiteManager.getInstance().init(MainActivity.this,"TEST");
+//                SQLiteManager.getInstance().registerTable(personTable);
+
+                test();
+            }
+        });
+
+
+    }
+
+    private void test() {
+        Category category = new Category();
+        category.name = "food";
+        category.save();
     }
 
     private void searchAllUser() {
@@ -77,4 +102,8 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 开启事务、切换数据库、数据库表升级、外键、多model依赖的情况。
      */
+
+
+
+
 }

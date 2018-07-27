@@ -20,13 +20,9 @@ public class User extends BaseModel{
     public String userName;// 用户姓名
     @Column(name = "age")
     public int age;
+    @Column(name = "heighx")
+    public int height;
+    @Column(name = "weight")
+    public int weight;
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "userId='" + userId + '\'' +
-                ", userName='" + userName + '\'' +
-                ", age=" + age +
-                '}';
-    }
 }
