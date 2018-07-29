@@ -1,16 +1,15 @@
 package com.example.zhangcan603.dbflowdemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.zhangcan603.dbflowdemo.sqlite.SQLiteManager;
-import com.example.zhangcan603.dbflowdemo.sqlite.table.PersonTable;
-import com.example.zhangcan603.dbflowdemo.table.Category;
-import com.example.zhangcan603.dbflowdemo.table.User;
-import com.example.zhangcan603.dbflowdemo.table.User_Table;
+
+import com.example.zhangcan603.dbflowdemo.dbflow.table.Category;
+import com.example.zhangcan603.dbflowdemo.dbflow.table.User;
+import com.example.zhangcan603.dbflowdemo.dbflow.table.User_Table;
 import com.raizlabs.android.dbflow.sql.language.SQLite;
 
 import java.util.List;

@@ -1,7 +1,7 @@
-package com.example.zhangcan603.dbflowdemo.db;
+package com.example.zhangcan603.dbflowdemo.dbflow.db;
 
-import com.example.zhangcan603.dbflowdemo.table.Category;
-import com.example.zhangcan603.dbflowdemo.table.User;
+import com.example.zhangcan603.dbflowdemo.dbflow.table.Category;
+import com.example.zhangcan603.dbflowdemo.dbflow.table.User;
 import com.raizlabs.android.dbflow.annotation.Database;
 import com.raizlabs.android.dbflow.annotation.Migration;
 import com.raizlabs.android.dbflow.sql.SQLiteType;

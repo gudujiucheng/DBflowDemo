@@ -1,4 +1,4 @@
-package com.example.zhangcan603.dbflowdemo.db;
+package com.example.zhangcan603.dbflowdemo.dbflow.db;
 
 
 import com.raizlabs.android.dbflow.annotation.Database;

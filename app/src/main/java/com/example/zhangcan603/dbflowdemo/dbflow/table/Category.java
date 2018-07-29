@@ -1,6 +1,6 @@
-package com.example.zhangcan603.dbflowdemo.table;
+package com.example.zhangcan603.dbflowdemo.dbflow.table;
 
-import com.example.zhangcan603.dbflowdemo.db.UserDb;
+import com.example.zhangcan603.dbflowdemo.dbflow.db.UserDb;
 import com.raizlabs.android.dbflow.annotation.Column;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;
 import com.raizlabs.android.dbflow.annotation.Table;
