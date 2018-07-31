@@ -30,8 +30,7 @@ dependencies {
     // See https://bitbucket.org/hvisser/android-apt/wiki/Migration
     //原来这行是用来注解用的
     annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${rootProject.ext.dbflowVersion}"
-    implementation "com.github.Raizlabs.DBFlow:dbflow-core:${rootProject.ext.dbflowVersion}"
-    implementation "com.github.Raizlabs.DBFlow:dbflow:${rootProject.ext.dbflowVersion}"
+    api project(':libdatabase')
 
     // sql-cipher database encryption (optional)
     // implementation "com.github.Raizlabs.DBFlow:dbflow-sqlcipher:${dbflow_version}"

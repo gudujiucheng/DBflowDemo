@@ -2,6 +2,8 @@ package com.example.zhangcan603.dbflowdemo;
 
 import android.app.Application;
 
+import com.example.libdatabase.DatabaseManager;
+import com.example.zhangcan603.dbflowdemo.dbflow.db.UserDb;
 import com.example.zhangcan603.dbflowdemo.objectbox.MyObjectBox;
 import com.raizlabs.android.dbflow.config.FlowManager;
 
@@ -14,8 +16,8 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        //dbflow
-        FlowManager.init(this);
+        //dbflow 初始化
+        DatabaseManager.getInstance().init(this, UserDb.class);
 
         baseApp = this;
         boxStore = MyObjectBox.builder().androidContext(this).build();

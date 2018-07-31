@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 SQLite.delete(User.class).execute();
                 searchAllUser();
 
+                //TODO 封装增删改查  可以把类名 以及条件封装进去  ，先搞现有的列表查询，或者user表查询， 为了解耦可以把别人的接口在包装一层
                 List<User> list = SQLite.select().from(User.class).where(User_Table.age.eq(10),User_Table.userName.isNotNull()).queryList();
             }
         });
