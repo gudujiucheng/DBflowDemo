@@ -43,9 +43,10 @@ public class DataBaseContext extends ContextWrapper {
      */
     public void switchUserDb(String userId) {
         // 停止当前用户数据库的处理事务
-        // userName设置成功空以绕过DBFlow删除数据库的处理
+        // userName设置成功空以绕过DBFlow删除数据库的处理（数据库的路径是根据userid变化而变化的）
         setUserId("");
         DatabaseDefinition databaseDefinition = FlowManager.getDatabase(mUserDBCls);
+        //这里应该是清空数据库
         databaseDefinition.reset(this);
 
         // 重新打开用户数据库，设置userId为新数据库名字的前缀
@@ -57,6 +58,7 @@ public class DataBaseContext extends ContextWrapper {
 
     @Override
     public File getDatabasePath(String name) {
+        //这个应该是通过改数据库的路径来实现的切换库  参考：https://blog.csdn.net/tomcat_lgs/article/details/59496713
         return super.getDatabasePath(getName(name));
     }
 
