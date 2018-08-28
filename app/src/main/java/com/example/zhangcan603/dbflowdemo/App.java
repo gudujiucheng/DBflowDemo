@@ -5,7 +5,6 @@ import android.app.Application;
 import com.example.libdatabase.DatabaseManager;
 import com.example.zhangcan603.dbflowdemo.dbflow.db.UserDb;
 import com.example.zhangcan603.dbflowdemo.objectbox.MyObjectBox;
-import com.raizlabs.android.dbflow.config.FlowManager;
 
 import io.objectbox.BoxStore;
 import io.objectbox.android.AndroidObjectBrowser;
@@ -18,6 +17,7 @@ public class App extends Application {
         super.onCreate();
         //dbflow 初始化
         DatabaseManager.getInstance().init(this, UserDb.class);
+
 
         baseApp = this;
         boxStore = MyObjectBox.builder().androidContext(this).build();

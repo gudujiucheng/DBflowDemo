@@ -8,8 +8,9 @@ import com.raizlabs.android.dbflow.structure.BaseModel;
 
 @Table(database = UserDb.class)
 public class Category  extends BaseModel{
+    @PrimaryKey(autoincrement = true)
+    public long id;
     @Column(name = "name")
-    @PrimaryKey
     public String name;
 
     @Column(name = "level")

@@ -15,10 +15,13 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
     }
 }
 
 dependencies {
+
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
@@ -34,4 +37,6 @@ dependencies {
 
     // sql-cipher database encryption (optional)
     // implementation "com.github.Raizlabs.DBFlow:dbflow-sqlcipher:${dbflow_version}"
+
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.4'
 }

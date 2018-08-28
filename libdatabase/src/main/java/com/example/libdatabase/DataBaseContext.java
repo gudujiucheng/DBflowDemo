@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
+import android.text.TextUtils;
 
 import com.raizlabs.android.dbflow.config.DatabaseDefinition;
 import com.raizlabs.android.dbflow.config.FlowManager;
@@ -31,9 +32,12 @@ public class DataBaseContext extends ContextWrapper {
     }
 
     public String getName(String name) {
+        //如果当前要获取的数据库 是UserDB ，则动态切换路径
         if (FlowManager.getDatabase(mUserDBCls).getDatabaseName().equals(name)) ;
         {
-            name = String.format("%s_%s", userId, name);
+            if (!TextUtils.isEmpty(userId)) {
+                name = String.format("%s_%s", userId, name);
+            }
         }
         return name;
     }
@@ -47,7 +51,7 @@ public class DataBaseContext extends ContextWrapper {
         setUserId("");
         DatabaseDefinition databaseDefinition = FlowManager.getDatabase(mUserDBCls);
         //这里应该是清空数据库
-        databaseDefinition.reset(this);
+        databaseDefinition.reset();
 
         // 重新打开用户数据库，设置userId为新数据库名字的前缀
         OpenHelper openHelper = databaseDefinition.getHelper();
